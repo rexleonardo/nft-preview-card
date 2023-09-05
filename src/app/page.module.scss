@@ -1,0 +1,132 @@
+.mainContainer {
+    border-radius: 15px;
+    background-color: var(--very-dark-blue-card-bg);
+    max-width: 327px;
+    padding: 24px;
+
+    .displayPhotoContainer {
+        position: relative;
+    }
+
+    .displayPhoto {
+        border-radius: 8px;
+        width: 278px;
+        height: 278px;
+        object-fit: cover;
+    }
+
+    .overlay {
+        background-color: var(--cyan);
+        border-radius: 8px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 200ms;
+        cursor: pointer;
+    }
+    
+    .displayPhotoContainer:hover .overlay {
+        opacity: 0.503;
+    }
+
+    .iconView {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    .header {
+        margin-top: 24px;
+        color: var(--white);
+        font-size: 22px;
+        line-height: normal;
+    }
+
+    .description {
+        margin-top: 12px;
+        font-weight: 300;
+        line-height: 26px;
+    }
+
+    .status {
+        margin: 16px 0 16px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+
+        .value {
+            display: flex;
+            align-items: center;
+            color: var(--cyan);
+            font-weight: 600;
+            line-height: normal;
+
+            img {
+                margin-right: 6.48px;
+            }
+        }
+
+        .duration {
+            display: flex;
+            align-items: center;
+            
+            img {
+                margin-right: 7.69px;
+            }
+        }
+    }
+
+    hr {
+        border: 1px solid var(--very-dark-blue-line);
+    }
+
+    .footer {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+
+        .imageAvatar {
+            margin-right: 16px;
+            border: 1px solid var(--white);
+            border-radius: 33px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    .mainContainer {
+        max-width: 350px;
+        padding: 24px 24px 32px;
+
+        .displayPhoto {
+            width: 302px;
+            height: 302px;
+        }
+
+        .description {
+            margin-top: 16px;
+        }
+
+        .status {
+            margin: 24px 0 24px;
+            font-size: 16px;
+        }
+
+        .footer {
+            font-size: 16px;
+        }
+    }
+
+
+}
